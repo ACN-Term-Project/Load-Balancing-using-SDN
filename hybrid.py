@@ -18,11 +18,11 @@ MONITOR_INTERVAL = 5.0
 FLOW_IDLE_TIMEOUT = 30
 LOAD_THRESHOLD = 0.5
 
-class HybridDWRSFixed(app_manager.RyuApp):
+class Hybrid(app_manager.RyuApp):
     OFP_VERSIONS = [ofproto_v1_3.OFP_VERSION]
 
     def __init__(self, *args, **kwargs):
-        super(HybridDWRSFixed, self).__init__(*args, **kwargs)
+        super(Hybrid, self).__init__(*args, **kwargs)
         self.datapaths = {}            # dpid -> datapath
         self.mac_to_port = {}          # dpid -> { mac: port }
         self.ip_to_port = {}           # ip -> port (learned)
